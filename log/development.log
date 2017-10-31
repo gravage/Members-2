@@ -1,0 +1,1056 @@
+  [1m[36m (146.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (108.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateUsers (20171031120131)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar, "password" varchar, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20171031120131"]]
+  [1m[35m (136.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/gossips" for 127.0.0.1 at 2017-10-31 14:53:36 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (No route matches [GET] "/gossips"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (29.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (34.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (92.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (61.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-31 14:53:44 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/lib/ruby/vendor_ruby/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 97ms (Views: 96.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home" for 127.0.0.1 at 2017-10-31 14:53:53 +0100
+
+ActionController::RoutingError (No route matches [GET] "/home"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.3ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2017-10-31 14:53:58 +0100
+
+ActionController::RoutingError (No route matches [GET] "/user"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2017-10-31 14:54:02 +0100
+
+ActionController::RoutingError (No route matches [GET] "/users"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (16.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.7ms)
+
+
+Started GET "/new" for 127.0.0.1 at 2017-10-31 14:54:14 +0100
+
+ActionController::RoutingError (No route matches [GET] "/new"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (17.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (22.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.6ms)
+
+
+Started GET "/user/new" for 127.0.0.1 at 2017-10-31 14:57:51 +0100
+
+ActionController::RoutingError (No route matches [GET] "/user/new"):
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 14:59:10 +0100
+
+SyntaxError (/home/youssef/Bureau/members-2/app/controllers/users_controller.rb:34: syntax error, unexpected keyword_end, expecting end-of-input):
+  app/controllers/users_controller.rb:34: syntax error, unexpected keyword_end, expecting end-of-input
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 14:59:29 +0100
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 14:59:55 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (7.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (23.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:00:02 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:01:47 +0100
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:02:50 +0100
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:08:42 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.6) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.6) lib/active_record/migration.rb:373:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:88:in `__run_callbacks__'
+  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  /usr/lib/ruby/vendor_ruby/active_support/callbacks.rb:81:in `run_callbacks'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/callbacks.rb:27:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/reloader.rb:73:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:38:in `call_app'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `block in call'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `block in tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:26:in `tagged'
+  /usr/lib/ruby/vendor_ruby/active_support/tagged_logging.rb:68:in `tagged'
+  /usr/lib/ruby/vendor_ruby/rails/rack/logger.rb:20:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  /usr/lib/ruby/vendor_ruby/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/engine.rb:518:in `call'
+  /usr/lib/ruby/vendor_ruby/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (3.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (53.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddPasswordDigestToUsers (20171031140802)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "password_digest" varchar[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20171031140802"]]
+  [1m[36m (81.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:09:54 +0100
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (29.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:11:14 +0100
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (21.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:13:42 +0100
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:15:57 +0100
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (10.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:16:24 +0100
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-10-31 15:16:32 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/lib/ruby/vendor_ruby/rails/templates/rails/welcome/index.html.erb (0.8ms)
+Completed 200 OK in 6ms (Views: 6.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:17:09 +0100
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+TypeError (superclass must be a Class (Module given)):
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (21.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:18:21 +0100
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- bcrypt):
+  app/models/user.rb:11:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/users_controller.rb:12:in `new'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:18:31 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 1258ms (Views: 1248.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-10-31 15:18:33 +0100
+
+
+Started GET "/assets/turbolinks.self-1d1fddf91adc38ac2045c51f0a3e05ca97d07d24d15a4dcbf705009106489e69.js?body=1" for 127.0.0.1 at 2017-10-31 15:18:33 +0100
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-10-31 15:18:33 +0100
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:20:24 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/youssef/Bureau/members-2/app/views"
+):
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@user) do |f| %>
+    6:       <%= render 'shared/error_messages' %>
+    7:       <%= f.label :name %>
+    8:       <%= f.text_field :name, class: 'form-control' %>
+    9:       <%= f.label :email %>
+  app/views/users/new.html.erb:6:in `block in _app_views_users_new_html_erb___372174295939230691_70348148688340'
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb___372174295939230691_70348148688340'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:21:10 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:21:38 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/youssef/Bureau/members-2/app/views"
+):
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@user) do |f| %>
+    6:       <%= render 'shared/error_messages' %>
+    7:       <%= f.label :name %>
+    8:       <%= f.text_field :name, class: 'form-control' %>
+    9:       <%= f.label :email %>
+  app/views/users/new.html.erb:6:in `block in _app_views_users_new_html_erb___372174295939230691_70348247894920'
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb___372174295939230691_70348247894920'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:25:34 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/youssef/Bureau/members-2/app/views"
+):
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@user) do |f| %>
+    6:       <%= render 'shared/error_messages' %>
+    7:       <%= f.label :name %>
+    8:       <%= f.text_field :name, class: 'form-control' %>
+    9:       <%= f.label :email %>
+  app/views/users/new.html.erb:6:in `block in _app_views_users_new_html_erb___372174295939230691_70348247894920'
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb___372174295939230691_70348247894920'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:25:49 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/youssef/Bureau/members-2/app/views"
+):
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@user) do |f| %>
+    6:       <%= render 'shared/error_messages' %>
+    7:       <%= f.label :name %>
+    8:       <%= f.text_field :name, class: 'form-control' %>
+    9:       <%= f.label :email %>
+  app/views/users/new.html.erb:6:in `block in _app_views_users_new_html_erb___372174295939230691_70348247894920'
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb___372174295939230691_70348247894920'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (8.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:26:23 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:26:40 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 21ms (Views: 19.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:27:40 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/youssef/Bureau/members-2/app/views"
+):
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@user) do |f| %>
+    6:       <%= render 'shared/error_messages' %>
+    7:       <%= f.label :name %>
+    8:       <%= f.text_field :name, class: 'form-control' %>
+    9:       <%= f.label :email %>
+  app/views/users/new.html.erb:6:in `block in _app_views_users_new_html_erb___372174295939230691_32548560'
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb___372174295939230691_32548560'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:37:41 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/youssef/Bureau/members-2/app/views"
+):
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@user) do |f| %>
+    6:       <%= render 'shared/error_messages' %>
+    7:       <%= f.label :name %>
+    8:       <%= f.text_field :name, class: 'form-control' %>
+    9:       <%= f.label :email %>
+  app/views/users/new.html.erb:6:in `block in _app_views_users_new_html_erb___372174295939230691_32548560'
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb___372174295939230691_32548560'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.8ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:38:22 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/youssef/Bureau/members-2/app/assets/images
+  /home/youssef/Bureau/members-2/app/assets/javascripts
+  /home/youssef/Bureau/members-2/app/assets/stylesheets
+  /home/youssef/Bureau/members-2/vendor/assets/javascripts
+  /home/youssef/Bureau/members-2/vendor/assets/stylesheets
+  /var/lib/gems/2.3.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /var/lib/gems/2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /var/lib/gems/2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>Members2</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/custom.scss:1
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1852621674555098238_36203640'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (10.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.0ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:43:53 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Missing partial shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/youssef/Bureau/members-2/app/views"
+):
+    3: <div class="row">
+    4:   <div class="col-md-6 col-md-offset-3">
+    5:     <%= form_for(@user) do |f| %>
+    6:       <%= render 'shared/error_messages' %>
+    7:       <%= f.label :name %>
+    8:       <%= f.text_field :name, class: 'form-control' %>
+    9:       <%= f.label :email %>
+  app/views/users/new.html.erb:6:in `block in _app_views_users_new_html_erb___372174295939230691_70348153287160'
+  app/views/users/new.html.erb:5:in `_app_views_users_new_html_erb___372174295939230691_70348153287160'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (31.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:47:33 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/youssef/Bureau/members-2/app/assets/images
+  /home/youssef/Bureau/members-2/app/assets/javascripts
+  /home/youssef/Bureau/members-2/app/assets/stylesheets
+  /home/youssef/Bureau/members-2/vendor/assets/javascripts
+  /home/youssef/Bureau/members-2/vendor/assets/stylesheets
+  /var/lib/gems/2.3.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /var/lib/gems/2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /var/lib/gems/2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>Members2</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/custom.scss:1
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1852621674555098238_36203640'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (29.9ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (30.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2017-10-31 15:47:55 +0100
+Processing by UsersController#new as HTML
+  Rendered users/new.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (File to import not found or unreadable: bootstrap-sprockets.
+Load paths:
+  /home/youssef/Bureau/members-2/app/assets/images
+  /home/youssef/Bureau/members-2/app/assets/javascripts
+  /home/youssef/Bureau/members-2/app/assets/stylesheets
+  /home/youssef/Bureau/members-2/vendor/assets/javascripts
+  /home/youssef/Bureau/members-2/vendor/assets/stylesheets
+  /var/lib/gems/2.3.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /var/lib/gems/2.3.0/gems/coffee-rails-4.1.1/lib/assets/javascripts
+  /var/lib/gems/2.3.0/gems/turbolinks-source-5.0.3/lib/assets/javascripts):
+    2: <html>
+    3: <head>
+    4:   <title>Members2</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  app/assets/stylesheets/custom.scss:1
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__1852621674555098238_36203640'
+
+
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_source.erb (19.7ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.5ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /usr/lib/ruby/vendor_ruby/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.7ms)
